@@ -1,0 +1,40 @@
+{
+  "id": "cloudron.owncast.app",
+  "title": "Owncast",
+  "author": "Atridad Lahiji",
+  "description": "file://DESCRIPTION.md",
+  "tagline": "Self-hosted live video and web chat server.",
+  "version": "0.2.0",
+  "healthCheckPath": "/",
+  "memoryLimit": 1342177280,
+  "httpPort": 8080,
+  "manifestVersion": 2,
+  "website": "https://owncast.online",
+  "contactEmail": "atridad@icloud.com",
+  "icon": "logo.png",
+  "optionalSso": true,
+  "addons": {
+    "mysql": {},
+    "localstorage": {
+      "ftp": {
+        "uid": 33,
+        "uname": "www-data"
+      }
+    },
+    "sendmail": {}
+  },
+  "tcpPorts": {
+    "RTMP_PORT": {
+      "title": "RTMP Port",
+      "description": "RTMP Port",
+      "defaultValue": 1935,
+      "containerPort": 1935
+    }
+  },
+  "tags": [ "golang", "stream" ],
+  "changelog": "file://CHANGELOG",
+  "postInstallMessage": "file://POSTINSTALL.md",
+  "minBoxVersion": "6.1.2",
+  "forumUrl": "https://forum.cloudron.io/category/15/owncast",
+  "documentationUrl": "https://docs.cloudron.io/apps/owncast/"
+}
